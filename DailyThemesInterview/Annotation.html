@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DailyThemesInterview</title>
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript"></script>
+	<script src="app.js" type="text/javascript"></script>
+	<script src="maincontroller.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div ng-app='DailyThemesApp' ng-controller='MainController'>
+      <div>
+        <br />
+        <input id="first" type="button" value="  <<  " /><input id="previous" type="button" value="  <  " />
+		<input id="next" type="button" value="  >  " /><input id="last" type="button" value="  >>  " />
+        <span id="pageinfo"></span>
+        <table id="datas" border="1" cellspacing="0" style="border-collapse: collapse">
+          <thead>
+            <tr>
+              <th>URL</th>
+			  <th>User</th>
+              <th>Text</th>
+              <th>Consumer</th>
+              <th>Quote</th>
+              <th>ID</th>
+            </tr>
+          </thead>
+          <tbody id="data-body">
+            <tr id="template" class="row" ng-repeat="item in rows">
+              <td class="uri">{{item.uri}}</td>
+              <td class="user">{{item.user}}</td>
+              <td class="text">{{item.text}}</td>
+              <td class="consumer">{{item.consumer}}</td>
+              <td class="quote">{{item.quote}}</td>
+              <td class="id">{{item.id}}</td>
+            </tr>
+		  </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
